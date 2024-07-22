@@ -11,23 +11,23 @@ body {
 
 .carousel {
   width: 80%;
-  height: 170vb;
+  height: 150vh; /* Ajusta la altura según tus necesidades */
   position: relative;
 }
 
 .carousel-inner {
   width: 100%;
-  height: 200%;
+  height: 100%;
 }
 
 .carousel-inner img {
   width: 100%;
-  height: 200%;
+  height: 100%;
   object-fit: cover;
 }
 
 .card {
-  background: rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.3); /* Fondo blanco más transparente para la tarjeta */
   padding: 20px;
   border-radius: 10px;
   text-align: center;
@@ -36,21 +36,40 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  width: 90%; /* Ajusta el ancho de la tarjeta */
+  max-width: 400px; /* Limita el ancho máximo de la tarjeta */
 }
 
 .profile-img {
-  width: 130px;
-  height: 150px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin: 0 auto;
-  border: 5px solid #fff;
+  width: 130px; /* Ancho de la imagen de perfil */
+  height: 150px; /* Altura de la imagen de perfil */
+  border-radius: 50%; /* Hace que la imagen sea circular */
+  object-fit: cover; /* Ajusta la imagen para cubrir el contenedor sin deformarse */
+  margin: 0 auto; /* Centra la imagen dentro de su contenedor */
+  border: 5px solid #fff; /* Borde blanco de 5px alrededor de la imagen */
 }
 
 .btn-custom {
-  background-color: #f7887e;
-  color: white;
-  width: 100%;
-  margin: 10px 0;
-  font-size: 1.2em;
+  background-color: #f7887e; /* Color de fondo personalizado para los botones */
+  color: white; /* Color del texto en los botones */
+  width: 100%; /* Ancho de los botones al 100% del contenedor */
+  margin: 10px 0; /* Margen de 10px arriba y abajo de los botones */
+  font-size: 1.2em; /* Tamaño de fuente de 1.2em para el texto en los botones */
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+  .carousel {
+      width: 100%; /* Ancho completo en pantallas pequeñas */
+      height: 40vh; /* Altura ajustada en pantallas pequeñas */
+  }
+
+  .profile-img {
+      width: 100px; /* Ajusta el ancho de la imagen en pantallas pequeñas */
+      height: 100px; /* Ajusta la altura de la imagen en pantallas pequeñas */
+  }
+
+  .btn-custom {
+      font-size: 1em; /* Ajusta el tamaño de fuente en pantallas pequeñas */
+  }
 }
